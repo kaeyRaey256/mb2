@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Market Bolt (MBolt) — Uganda's leading BTL, experiential marketing and digital solutions agency. Own your market. 15+ years. Countrywide reach.">
+  <meta property="og:title" content="MBolt — Own Your Market">
+  <meta property="og:description" content="Uganda's leading BTL and digital marketing agency. 15+ years. Countrywide reach.">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>MBolt — Own Your Market</title>
+  <meta name="theme-color" content="#1D6A3A">
+  <link rel="preload" as="image" href="assets/images/hero.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){
+      var s=localStorage.getItem('mbolt-theme');
+      var d=window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));
+    })();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Market Bolt Uganda Ltd","alternateName":"MBolt","description":"Uganda's leading BTL, experiential marketing and digital solutions agency.","url":"https://www.market-bolt.com","telephone":["+256752625755","+256758532555"],"email":["jtayebwa@market-bolt.com","pangulo@market-bolt.com"],"address":{"@type":"PostalAddress","addressLocality":"Kiira, Kampala","addressCountry":"UG"},"foundingDate":"2008","areaServed":{"@type":"Country","name":"Uganda"},"serviceType":["BTL Marketing","Digital Solutions","Activation Strategy","Communications","Sales and Distribution","General Supplies"]}
+  </script>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cur-dot" id="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" id="cur-ring" aria-hidden="true"></div>
+
+<!-- SCROLL UP -->
+<button class="scroll-up" id="scroll-up" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<!-- ACCESSIBILITY -->
+<div class="a11y-wrap" role="complementary" aria-label="Accessibility options">
+  <button class="a11y-toggle" id="a11y-toggle" aria-label="Accessibility settings" aria-expanded="false">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="2"/><path d="M12 6v6l3 3M12 22v-4M7 9h10"/></svg>
+  </button>
+  <div class="a11y-panel" id="a11y-panel" role="dialog" aria-label="Accessibility options">
+    <div class="a11y-title">Accessibility</div>
+    <label class="a11y-opt"><input type="checkbox" id="a11y-hc"> High contrast</label>
+    <label class="a11y-opt"><input type="checkbox" id="a11y-motion"> Reduce motion</label>
+    <span class="a11y-slider-lbl" id="fs-lbl">Font size</span>
+    <input type="range" id="a11y-font" min="14" max="21" value="16" step="1" aria-labelledby="fs-lbl">
+  </div>
+</div>
+
+<!-- CAPABILITY DRAWER -->
+<div class="drawer-backdrop" id="cap-backdrop"></div>
+<aside class="cap-drawer" id="cap-drawer" role="dialog" aria-modal="true" aria-label="Capability detail">
+  <div class="cap-drawer-header">
+    <div>
+      <div class="cap-drawer-eyebrow">Capability 01</div>
+      <div class="cap-drawer-title">BTL Marketing</div>
+    </div>
+    <button class="cap-drawer-close" id="cap-drawer-close" aria-label="Close">
+      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <div class="cap-drawer-body">
+    <p class="cap-drawer-desc"></p>
+    <div class="cap-drawer-tags"></div>
+    <div class="cap-drawer-num" aria-hidden="true">01</div>
+  </div>
+  <div class="cap-drawer-cta">
+    <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="document.getElementById('cap-drawer').classList.remove('open');document.getElementById('cap-backdrop').classList.remove('open');document.body.style.overflow='';">
+      <span>Brief us on this</span>
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+    </a>
+  </div>
+</aside>
+
+<!-- WORK MODAL -->
+<div class="modal-backdrop" id="modal-backdrop"></div>
+<div class="work-modal" id="work-modal" role="dialog" aria-modal="true" aria-label="Work detail">
+  <div class="work-modal-img-wrap">
+    <img class="work-modal-img" src="" alt="">
+    <div class="work-modal-img-overlay"></div>
+    <div class="work-modal-cat-badge">Category</div>
+  </div>
+  <div class="work-modal-body">
+    <button class="work-modal-close" id="work-modal-close" aria-label="Close">
+      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="work-modal-client"></div>
+    <h2 class="work-modal-title"></h2>
+    <p class="work-modal-copy"></p>
+    <a href="#contact" class="btn btn-primary" onclick="document.getElementById('work-modal').classList.remove('open');document.getElementById('modal-backdrop').classList.remove('open');document.body.style.overflow='';">
+      <span>Brief us on a similar project</span>
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+    </a>
+    <div class="work-modal-num" aria-hidden="true">01</div>
+  </div>
+</div>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie notice">
+  <p class="cookie-text">We use cookies to improve your experience. See our <a href="legal.html">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookie-accept">Accept</button>
+    <button class="cookie-decline" id="cookie-decline">Decline</button>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="nav on-dark" id="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="MBolt home">
+      <img src="assets/icons/logo.svg" alt="MBolt" class="logo-colour">
+      <img src="assets/icons/logo-white.svg" alt="MBolt" class="logo-white">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="careers.html">Careers</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="#contact" class="nav-cta">Brief us
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+      </a>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
+    <div class="drawer-wm" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9 22L19.5 9.5H13L13 2Z"/></svg>
+    </div>
+    <nav>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="#contact" class="drawer-cta">Brief us</a>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+
+  <div class="hero-slide" style="background-image:url('assets/images/work-3.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('assets/images/work-1.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('assets/images/work-2.jpg')"></div>
+
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-grain"   aria-hidden="true"></div>
+
+  <div class="hero-scroll-cue" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-label">Scroll</span>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-dot"></div>
+        <span class="hero-eyebrow-text">BTL</span>
+        <span class="hero-eyebrow-sep">·</span>
+        <span class="hero-eyebrow-text">Communications</span>
+        <span class="hero-eyebrow-sep">·</span>
+        <span class="hero-eyebrow-text">Digital Solutions</span>
+      </div>
+      <h1 class="hero-tagline" id="hero-heading">
+        Own Your
+        <span class="line-accent">Market.</span>
+      </h1>
+    </div>
+    <div class="hero-right">
+      <p class="hero-sub">Uganda's leading BTL and experiential marketing agency. Est. 2008.</p>
+      <a href="#contact" class="btn btn-red">
+        <span>Brief us</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-counter" aria-hidden="true">
+    <div class="hero-counter-dot active"></div>
+    <div class="hero-counter-dot"></div>
+    <div class="hero-counter-dot"></div>
+  </div>
+
+</section>
+
+<!-- PROOF STRIP -->
+<div class="proof-strip" aria-label="Key credentials">
+  <div class="proof-item reveal">
+    <div class="proof-number"><span>15</span><sup>+</sup></div>
+    <div class="proof-label">Years in the field</div>
+  </div>
+  <div class="proof-item reveal reveal-d1">
+    <div class="proof-number"><span>10</span><sup>+</sup></div>
+    <div class="proof-label">Major brands activated</div>
+  </div>
+  <div class="proof-item reveal reveal-d2">
+    <div class="proof-number"><span>6</span></div>
+    <div class="proof-label">Service capabilities</div>
+  </div>
+  <div class="proof-item reveal reveal-d3">
+    <div class="proof-number" style="font-size:clamp(1rem,1.8vw,1.5rem);letter-spacing:.02em;">Africa &amp; Beyond</div>
+    <div class="proof-label">Operational reach</div>
+  </div>
+</div>
+
+<!-- CAPABILITIES -->
+<section class="cap-section" id="capabilities" aria-labelledby="cap-heading">
+
+  <!-- Invisible heading for accessibility -->
+  <h2 class="sr-only" id="cap-heading">Our Capabilities</h2>
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+  <!-- Left progress rail -->
+  <div class="cap-rail" aria-hidden="true">
+    <div class="cap-rail-label">Capabilities</div>
+    <div class="cap-rail-track">
+      <div class="cap-rail-fill"></div>
+    </div>
+  </div>
+
+  <!-- Panel 01: BTL -->
+  <div class="cap-panel" data-panel="btl">
+    <div class="cap-ghost" aria-hidden="true">01</div>
+    <div class="cap-inner">
+      <div class="cap-num">01 of 06</div>
+      <h3 class="cap-name">BTL<br>Marketing</h3>
+      <p class="cap-desc">We stage real experiences that reach people where they live, work, and gather. Brand activations, roadshows, promotions and field marketing built for the Ugandan market — fifteen years of bringing brands to life in the communities that matter.</p>
+      <div class="cap-tags">
+        <span class="cap-tag">Experiential</span>
+        <span class="cap-tag">Activations</span>
+        <span class="cap-tag">Promotions</span>
+        <span class="cap-tag">Road Shows</span>
+        <span class="cap-tag">Field Teams</span>
+      </div>
+      <button class="cap-cta" data-service="btl" aria-label="Explore BTL Marketing capability">
+        <span>Explore this capability</span>
+        <div class="cap-cta-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Panel 02: Digital -->
+  <div class="cap-panel" data-panel="digital">
+    <div class="cap-ghost" aria-hidden="true">02</div>
+    <div class="cap-inner">
+      <div class="cap-num">02 of 06</div>
+      <h3 class="cap-name">Digital<br>Solutions</h3>
+      <p class="cap-desc">The market is moving digital. We move with it. Loyalty programmes that keep consumers coming back, market intelligence that tells you what your competitors cannot see, digital platforms built on genuine consumer insight from the ground up.</p>
+      <div class="cap-tags">
+        <span class="cap-tag">Loyalty Programmes</span>
+        <span class="cap-tag">Market Intelligence</span>
+        <span class="cap-tag">Digital Platforms</span>
+        <span class="cap-tag">Data Solutions</span>
+      </div>
+      <button class="cap-cta" data-service="digital" aria-label="Explore Digital Solutions capability">
+        <span>Explore this capability</span>
+        <div class="cap-cta-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Panel 03: Strategy -->
+  <div class="cap-panel" data-panel="strategy">
+    <div class="cap-ghost" aria-hidden="true">03</div>
+    <div class="cap-inner">
+      <div class="cap-num">03 of 06</div>
+      <h3 class="cap-name">Activation<br>Strategy</h3>
+      <p class="cap-desc">A campaign without a strategy is noise. We conceptualise the idea, build the budget, design the execution plan, and ensure every moving part is accounted for before a single field team is deployed. Architecture before action.</p>
+      <div class="cap-tags">
+        <span class="cap-tag">Concept Development</span>
+        <span class="cap-tag">Budget Planning</span>
+        <span class="cap-tag">Execution Roadmaps</span>
+        <span class="cap-tag">Campaign Architecture</span>
+      </div>
+      <button class="cap-cta" data-service="strategy" aria-label="Explore Activation Strategy capability">
+        <span>Explore this capability</span>
+        <div class="cap-cta-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Panel 04: Comms -->
+  <div class="cap-panel" data-panel="comms">
+    <div class="cap-ghost" aria-hidden="true">04</div>
+    <div class="cap-inner">
+      <div class="cap-num">04 of 06</div>
+      <h3 class="cap-name">Communications</h3>
+      <p class="cap-desc">We make messages land. One-on-one or mass. Education campaigns, sensitisation programmes, awareness drives. We understand how Ugandan communities receive and act on information — and we build communications that respect that understanding.</p>
+      <div class="cap-tags">
+        <span class="cap-tag">One-on-One</span>
+        <span class="cap-tag">Awareness Campaigns</span>
+        <span class="cap-tag">Sensitisation</span>
+        <span class="cap-tag">Mass Communication</span>
+      </div>
+      <button class="cap-cta" data-service="comms" aria-label="Explore Communications capability">
+        <span>Explore this capability</span>
+        <div class="cap-cta-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Panel 05: Sales -->
+  <div class="cap-panel" data-panel="sales">
+    <div class="cap-ghost" aria-hidden="true">05</div>
+    <div class="cap-inner">
+      <div class="cap-num">05 of 06</div>
+      <h3 class="cap-name">Sales and<br>Distribution</h3>
+      <p class="cap-desc">Door to door, done right. Products moved. Targets hit. We deploy field teams with trade route mapping, daily reporting, and real-time route adjustments. If it needs to reach the market, we take it there — no excuses.</p>
+      <div class="cap-tags">
+        <span class="cap-tag">Trade Route Mapping</span>
+        <span class="cap-tag">Merchandising</span>
+        <span class="cap-tag">Product Placement</span>
+        <span class="cap-tag">Direct Sales</span>
+      </div>
+      <button class="cap-cta" data-service="sales" aria-label="Explore Sales and Distribution capability">
+        <span>Explore this capability</span>
+        <div class="cap-cta-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Panel 06: Supplies -->
+  <div class="cap-panel" data-panel="supplies">
+    <div class="cap-ghost" aria-hidden="true">06</div>
+    <div class="cap-inner">
+      <div class="cap-num">06 of 06</div>
+      <h3 class="cap-name">General<br>Supplies</h3>
+      <p class="cap-desc">Fifteen years of operating in Uganda means fifteen years of supplier relationships. Branded merchandise, event materials, promotional supplies. We source what you need, when you need it, and deliver it where it needs to go.</p>
+      <div class="cap-tags">
+        <span class="cap-tag">Branded Merchandise</span>
+        <span class="cap-tag">Event Materials</span>
+        <span class="cap-tag">Sourcing</span>
+        <span class="cap-tag">Supply Chain</span>
+      </div>
+      <button class="cap-cta" data-service="supplies" aria-label="Explore General Supplies capability">
+        <span>Explore this capability</span>
+        <div class="cap-cta-arrow">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </button>
+    </div>
+  </div>
+
+</section>
+
+<!-- CLIENTS TICKER -->
+<div class="clients-section" aria-label="Our clients">
+  <div class="clients-header">
+    <div>
+      <div class="eyebrow reveal">Trusted by the names that matter</div>
+      <h2 class="h-section reveal reveal-d1" style="max-width:480px;">Fifteen years of <em>trusted partnerships.</em></h2>
+    </div>
+    <p class="body-md reveal reveal-d2" style="max-width:240px;text-align:right;">From global institutions to homegrown champions — brands that keep coming back.</p>
+  </div>
+  <div class="ticker-outer">
+    <div class="ticker-track" id="clients-ticker">
+      <div class="client-cat-sep">Petroleum</div>
+      <div class="client-chip"><img src="assets/images/client-2.png" alt="TotalEnergies"><span class="client-chip-label">TotalEnergies</span></div>
+      <div class="client-chip"><img src="assets/images/client-7.png" alt="Rubis Energy"><span class="client-chip-label">Rubis Energy</span></div>
+      <div class="client-cat-sep">FMCG</div>
+      <div class="client-chip"><img src="assets/images/client-9.png" alt="Gorillo's Snacks"><span class="client-chip-label">Gorillo's Snacks</span></div>
+      <div class="client-chip"><img src="assets/images/client-10.png" alt="Seba's Golden Goodness"><span class="client-chip-label">Seba's Golden Goodness</span></div>
+      <div class="client-chip"><span class="client-chip-label">Snack It</span></div>
+      <div class="client-chip"><span class="client-chip-label">Da-Vita</span></div>
+      <div class="client-chip"><span class="client-chip-label">Benny's Chicken</span></div>
+      <div class="client-cat-sep">Telecom</div>
+      <div class="client-chip"><span class="client-chip-label">Airtel Uganda</span></div>
+      <div class="client-chip"><img src="assets/images/client-4.png" alt="Smile Telecom"><span class="client-chip-label">Smile Telecom</span></div>
+      <div class="client-chip"><img src="assets/images/client-5.png" alt="Orange Uganda"><span class="client-chip-label">Orange Uganda</span></div>
+      <div class="client-cat-sep">Fintech</div>
+      <div class="client-chip"><span class="client-chip-label">Wave</span></div>
+      <div class="client-cat-sep">Beverages</div>
+      <div class="client-chip"><img src="assets/images/client-1.png" alt="Nile Breweries"><span class="client-chip-label">Nile Breweries</span></div>
+      <div class="client-cat-sep">Construction</div>
+      <div class="client-chip"><img src="assets/images/client-6.png" alt="Hima Cement"><span class="client-chip-label">Hima Cement</span></div>
+      <div class="client-cat-sep">Financial</div>
+      <div class="client-chip"><span class="client-chip-label">KCB Bank</span></div>
+      <div class="client-chip"><span class="client-chip-label">Equity Bank</span></div>
+      <div class="client-chip"><span class="client-chip-label">ABSA Bank</span></div>
+      <div class="client-cat-sep">Global Partners</div>
+      <div class="client-chip"><span class="client-chip-label">World Bank</span></div>
+      <!-- DUPLICATE for seamless scroll -->
+      <div class="client-cat-sep" aria-hidden="true">Petroleum</div>
+      <div class="client-chip" aria-hidden="true"><img src="assets/images/client-2.png" alt=""><span class="client-chip-label">TotalEnergies</span></div>
+      <div class="client-chip" aria-hidden="true"><img src="assets/images/client-7.png" alt=""><span class="client-chip-label">Rubis Energy</span></div>
+      <div class="client-cat-sep" aria-hidden="true">FMCG</div>
+      <div class="client-chip" aria-hidden="true"><img src="assets/images/client-9.png" alt=""><span class="client-chip-label">Gorillo's Snacks</span></div>
+      <div class="client-chip" aria-hidden="true"><img src="assets/images/client-10.png" alt=""><span class="client-chip-label">Seba's Golden Goodness</span></div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">Snack It</span></div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">Da-Vita</span></div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">Benny's Chicken</span></div>
+      <div class="client-cat-sep" aria-hidden="true">Telecom</div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">Airtel Uganda</span></div>
+      <div class="client-chip" aria-hidden="true"><img src="assets/images/client-4.png" alt=""><span class="client-chip-label">Smile Telecom</span></div>
+      <div class="client-chip" aria-hidden="true"><img src="assets/images/client-5.png" alt=""><span class="client-chip-label">Orange Uganda</span></div>
+      <div class="client-cat-sep" aria-hidden="true">Fintech</div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">Wave</span></div>
+      <div class="client-cat-sep" aria-hidden="true">Beverages</div>
+      <div class="client-chip" aria-hidden="true"><img src="assets/images/client-1.png" alt=""><span class="client-chip-label">Nile Breweries</span></div>
+      <div class="client-cat-sep" aria-hidden="true">Construction</div>
+      <div class="client-chip" aria-hidden="true"><img src="assets/images/client-6.png" alt=""><span class="client-chip-label">Hima Cement</span></div>
+      <div class="client-cat-sep" aria-hidden="true">Financial</div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">KCB Bank</span></div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">Equity Bank</span></div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">ABSA Bank</span></div>
+      <div class="client-cat-sep" aria-hidden="true">Global Partners</div>
+      <div class="client-chip" aria-hidden="true"><span class="client-chip-label">World Bank</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="divider" aria-hidden="true">
+  <div class="divider-line"></div>
+  <div class="divider-bolt"><svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9 22L19.5 9.5H13L13 2Z"/></svg></div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- WORK -->
+<section class="work-section" id="work" aria-labelledby="work-heading">
+  <div class="work-header">
+    <div>
+      <div class="eyebrow reveal">Selected Work</div>
+      <h2 class="h-section reveal reveal-d1" id="work-heading">Some of what we've<br><em>been part of.</em></h2>
+    </div>
+    <a href="#contact" class="btn btn-outline reveal reveal-d2">
+      <span>Start your project</span>
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+    </a>
+  </div>
+
+  <div class="work-list" role="list">
+    <div class="work-row reveal" role="listitem" tabindex="0" data-work="w1">
+      <div class="work-row-num" aria-hidden="true">01</div>
+      <div class="work-row-info">
+        <div class="work-row-client">Orange Telecom</div>
+        <div class="work-row-name">Retail Outreach Campaign</div>
+        <div class="work-row-cat">Field Marketing</div>
+      </div>
+      <div class="work-row-thumb">
+        <img src="assets/images/work-1.jpg" alt="Orange Telecom Retail Outreach" loading="lazy">
+      </div>
+    </div>
+    <div class="work-row reveal reveal-d1" role="listitem" tabindex="0" data-work="w2">
+      <div class="work-row-num" aria-hidden="true">02</div>
+      <div class="work-row-info">
+        <div class="work-row-client">Gorillo's Snacks</div>
+        <div class="work-row-name">Branded Vans and Cannons</div>
+        <div class="work-row-cat">Promotions</div>
+      </div>
+      <div class="work-row-thumb">
+        <img src="assets/images/work-2.jpg" alt="Gorillo's Branded Vans" loading="lazy">
+      </div>
+    </div>
+    <div class="work-row reveal reveal-d2" role="listitem" tabindex="0" data-work="w3">
+      <div class="work-row-num" aria-hidden="true">03</div>
+      <div class="work-row-info">
+        <div class="work-row-client">TotalEnergies</div>
+        <div class="work-row-name">Brand Experience Event</div>
+        <div class="work-row-cat">Brand Experience</div>
+      </div>
+      <div class="work-row-thumb">
+        <img src="assets/images/work-3.jpg" alt="TotalEnergies Brand Experience" loading="lazy">
+      </div>
+    </div>
+    <div class="work-row reveal reveal-d3" role="listitem" tabindex="0" data-work="w4">
+      <div class="work-row-num" aria-hidden="true">04</div>
+      <div class="work-row-info">
+        <div class="work-row-client">Field Activation</div>
+        <div class="work-row-name">Pay Campaign</div>
+        <div class="work-row-cat">Sales and Distribution</div>
+      </div>
+      <div class="work-row-thumb">
+        <img src="assets/images/work-4.jpg" alt="Pay Campaign" loading="lazy">
+      </div>
+    </div>
+    <div class="work-row reveal reveal-d4" role="listitem" tabindex="0" data-work="w5">
+      <div class="work-row-num" aria-hidden="true">05</div>
+      <div class="work-row-info">
+        <div class="work-row-client">Orange Telecom</div>
+        <div class="work-row-name">Internet Packages Campaign</div>
+        <div class="work-row-cat">Communications</div>
+      </div>
+      <div class="work-row-thumb">
+        <img src="assets/images/work-5.jpg" alt="Orange Internet Campaign" loading="lazy">
+      </div>
+    </div>
+    <div class="work-row reveal reveal-d5" role="listitem" tabindex="0" data-work="w6">
+      <div class="work-row-num" aria-hidden="true">06</div>
+      <div class="work-row-info">
+        <div class="work-row-client">Smile Telecom</div>
+        <div class="work-row-name">Rural Outreach Campaign</div>
+        <div class="work-row-cat">Field Marketing</div>
+      </div>
+      <div class="work-row-thumb">
+        <img src="assets/images/work-6.jpg" alt="Smile Telecom Rural Outreach" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY TASTER -->
+<div class="gallery-taster" id="gallery">
+  <div class="gallery-taster-header">
+    <div>
+      <div class="eyebrow reveal">In the Field</div>
+      <h2 class="h-section reveal reveal-d1">Fifteen years of <em>activation.</em></h2>
+    </div>
+    <a href="gallery.html" class="btn btn-outline reveal reveal-d2">
+      <span>Full gallery</span>
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+    </a>
+  </div>
+  <div class="gallery-row-wrap">
+    <div class="gallery-row">
+      <div class="gallery-tile">
+        <img src="assets/images/gallery/gallery-1.png" alt="Raeys Gold Fry brand experience" loading="lazy">
+        <div class="gallery-tile-over">
+          <div class="gallery-tile-client">Raeys Gold Fry</div>
+          <div class="gallery-tile-name">Brand Experience</div>
+        </div>
+      </div>
+      <div class="gallery-tile">
+        <img src="assets/images/gallery/gallery-2.png" alt="Homely Energy direct sales" loading="lazy">
+        <div class="gallery-tile-over">
+          <div class="gallery-tile-client">Homely Energy</div>
+          <div class="gallery-tile-name">Direct Sales Activation</div>
+        </div>
+      </div>
+      <div class="gallery-tile">
+        <img src="assets/images/gallery/gallery-3.png" alt="Hima Cement activation" loading="lazy">
+        <div class="gallery-tile-over">
+          <div class="gallery-tile-client">Hima Cement</div>
+          <div class="gallery-tile-name">Brand Activation</div>
+        </div>
+      </div>
+      <div class="gallery-tile">
+        <img src="assets/images/work-3.jpg" alt="TotalEnergies brand experience" loading="lazy">
+        <div class="gallery-tile-over">
+          <div class="gallery-tile-client">TotalEnergies</div>
+          <div class="gallery-tile-name">Brand Experience Event</div>
+        </div>
+      </div>
+      <div class="gallery-tile">
+        <img src="assets/images/work-1.jpg" alt="Orange Telecom outreach" loading="lazy">
+        <div class="gallery-tile-over">
+          <div class="gallery-tile-client">Orange Telecom</div>
+          <div class="gallery-tile-name">Retail Outreach Campaign</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="m-item"><span class="m-dot"></span><span>Own Your Market</span></div>
+    <div class="m-item accent"><span class="m-dot"></span><span>15 Years</span></div>
+    <div class="m-item"><span class="m-dot"></span><span>BTL Excellence</span></div>
+    <div class="m-item accent"><span class="m-dot"></span><span>Digital Solutions</span></div>
+    <div class="m-item"><span class="m-dot"></span><span>Countrywide Reach</span></div>
+    <div class="m-item accent"><span class="m-dot"></span><span>Kampala, Uganda</span></div>
+    <div class="m-item"><span class="m-dot"></span><span>Field Teams</span></div>
+    <div class="m-item accent"><span class="m-dot"></span><span>Real Results</span></div>
+    <div class="m-item"><span class="m-dot"></span><span>Est. 2008</span></div>
+    <div class="m-item accent"><span class="m-dot"></span><span>Market Bolt</span></div>
+    <div class="m-item" aria-hidden="true"><span class="m-dot"></span><span>Own Your Market</span></div>
+    <div class="m-item accent" aria-hidden="true"><span class="m-dot"></span><span>15 Years</span></div>
+    <div class="m-item" aria-hidden="true"><span class="m-dot"></span><span>BTL Excellence</span></div>
+    <div class="m-item accent" aria-hidden="true"><span class="m-dot"></span><span>Digital Solutions</span></div>
+    <div class="m-item" aria-hidden="true"><span class="m-dot"></span><span>Countrywide Reach</span></div>
+    <div class="m-item accent" aria-hidden="true"><span class="m-dot"></span><span>Kampala, Uganda</span></div>
+    <div class="m-item" aria-hidden="true"><span class="m-dot"></span><span>Field Teams</span></div>
+    <div class="m-item accent" aria-hidden="true"><span class="m-dot"></span><span>Real Results</span></div>
+    <div class="m-item" aria-hidden="true"><span class="m-dot"></span><span>Est. 2008</span></div>
+    <div class="m-item accent" aria-hidden="true"><span class="m-dot"></span><span>Market Bolt</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section section-alt" id="about" aria-labelledby="about-heading">
+  <div class="reveal"><div class="eyebrow">Established 2008 · Kampala, Uganda</div></div>
+  <h2 class="h-section reveal reveal-d1" id="about-heading" style="margin-bottom:clamp(2.5rem,4vw,3.5rem);">Built here.<br><em>Operating everywhere.</em></h2>
+  <div class="about-grid">
+    <div>
+      <p class="about-manifesto reveal">Uganda's market cannot be reached from a boardroom. You have to be in it. For fifteen years, we have been.</p>
+      <p class="body-lg reveal reveal-d1">Market Bolt was founded by marketing professionals who believed Ugandan brands deserved world-class activation. We started with conviction, a handful of clients, and fifteen years of combined industry experience.</p>
+      <p class="body-lg reveal reveal-d2" style="margin-top:1.2rem;">Today we operate countrywide, with regional reach across East Africa and partnerships with international institutions. From field teams in Gulu to digital platforms in Kampala. The brands that took a chance on us in 2008 are still calling. That is not luck. That is delivery.</p>
+      <div class="values-grid reveal reveal-d3">
+        <div class="value-cell">
+          <div class="value-label">Execution</div>
+          <div class="value-desc">We show up. We deliver. Every time, everywhere.</div>
+        </div>
+        <div class="value-cell">
+          <div class="value-label">Honesty</div>
+          <div class="value-desc">We tell clients what they need to hear, not what they want to hear.</div>
+        </div>
+        <div class="value-cell">
+          <div class="value-label">Roots</div>
+          <div class="value-desc">Proudly Ugandan. Deeply grounded in this market.</div>
+        </div>
+        <div class="value-cell">
+          <div class="value-label">Ambition</div>
+          <div class="value-desc">Building the leading experiential and digital agency in East Africa.</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="about-number-block reveal">
+        <div class="about-big-num" aria-hidden="true">15</div>
+        <div class="about-num-label">years of making brands impossible to ignore</div>
+      </div>
+      <div style="margin-top:2.5rem;" class="reveal reveal-d1">
+        <a href="careers.html" class="btn btn-outline">
+          <span>Join our team</span>
+          <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section" id="team" aria-labelledby="team-heading">
+  <div class="reveal"><div class="eyebrow">The People</div></div>
+  <h2 class="h-section reveal reveal-d1" id="team-heading" style="margin-bottom:clamp(2rem,4vw,3rem);">The team behind<br><em>every activation.</em></h2>
+  <div class="team-photo-wrap reveal">
+    <img src="assets/images/team-group.jpg" alt="The MBolt team" loading="lazy">
+    <div class="team-photo-overlay" aria-hidden="true"></div>
+    <div class="team-photo-caption" aria-hidden="true">The team<br>since 2008.</div>
+  </div>
+  <div class="team-roster reveal reveal-d1" role="list">
+    <div class="roster-cell" role="listitem">
+      <div class="roster-name">Jude S. Tayebwa</div>
+      <div class="roster-role">Managing Director</div>
+    </div>
+    <div class="roster-cell" role="listitem">
+      <div class="roster-name">Patrick Angulo</div>
+      <div class="roster-role">Director, Head of Operations</div>
+    </div>
+    <div class="roster-cell" role="listitem">
+      <div class="roster-name">Abbey Senoga Ntege</div>
+      <div class="roster-role">Finance Manager</div>
+    </div>
+    <div class="roster-cell" role="listitem">
+      <div class="roster-name">Gerald Mukasa</div>
+      <div class="roster-role">Admin and Projects Manager</div>
+    </div>
+    <div class="roster-cell" role="listitem">
+      <div class="roster-name">David Lubwama</div>
+      <div class="roster-role">Projects Coordinator</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+    <a href="careers.html" class="btn btn-outline">
+      <span>Work with this team</span>
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testi-section" aria-labelledby="testi-heading">
+  <div class="reveal">
+    <h2 class="sr-only" id="testi-heading">What clients say</h2>
+    <blockquote>
+      <p class="testi-quote">Association with MBolt has been great. They dive into the problem and <em>do not hesitate in giving suggestions.</em> They come up with fresh ideas and have always surpassed expectations.</p>
+      <footer class="testi-author">
+        <div class="testi-avatar" aria-hidden="true">VM</div>
+        <div>
+          <div class="testi-name">Val Muleba</div>
+          <div class="testi-title">Product Manager, GlK Tampeco</div>
+        </div>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="testi-stats">
+    <div class="tstat reveal reveal-d1">
+      <div class="tstat-num">15+</div>
+      <div class="tstat-label">Years of consistent delivery</div>
+    </div>
+    <div class="tstat reveal reveal-d2">
+      <div class="tstat-num">100%</div>
+      <div class="tstat-label">Countrywide operational reach</div>
+    </div>
+    <div class="tstat red reveal reveal-d3">
+      <div class="tstat-num">Est.</div>
+      <div class="tstat-label">2008 — still delivering for the same clients</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact" aria-labelledby="contact-heading">
+  <div class="reveal">
+    <div class="eyebrow">Start the Conversation</div>
+    <h2 class="h-section" id="contact-heading" style="margin-bottom:1.2rem;">Got a brand moment<br>coming up? <em>Tell us.</em></h2>
+    <p class="contact-promise">Direct access to the principals. No account managers, no ticket numbers. Bring us your brief and we will bring you a plan, grounded in fifteen years of building brands across Uganda.</p>
+    <div class="channels">
+      <a href="tel:+256752625755" class="channel">
+        <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.12 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div>
+        <div><div class="ch-label">Call us</div><div class="ch-val">+256 752 625 755</div></div>
+      </a>
+      <a href="tel:+256758532555" class="channel">
+        <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.12 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div>
+        <div><div class="ch-label">Call us</div><div class="ch-val">+256 758 532 555</div></div>
+      </a>
+      <a href="mailto:jtayebwa@market-bolt.com" class="channel">
+        <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="ch-label">Jude Tayebwa</div><div class="ch-val">jtayebwa@market-bolt.com</div></div>
+      </a>
+      <a href="mailto:pangulo@market-bolt.com" class="channel">
+        <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="ch-label">Patrick Angulo</div><div class="ch-val">pangulo@market-bolt.com</div></div>
+      </a>
+      <div class="channel">
+        <div class="ch-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="ch-label">Find us</div><div class="ch-val">Kiira, Kampala, Uganda</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-card reveal reveal-d2" data-contact-form>
+    <div class="form-card-accent"></div>
+    <div class="form-body">
+      <div class="form-inner" data-form-inner>
+        <div class="form-title">Brief us.</div>
+        <div class="form-row">
+          <div class="field"><label for="f-name">Your name</label><input type="text" id="f-name" name="name" placeholder="First name" autocomplete="given-name" required></div>
+          <div class="field"><label for="f-company">Company</label><input type="text" id="f-company" name="company" placeholder="Your organisation" autocomplete="organization"></div>
+        </div>
+        <div class="field"><label for="f-email">Email address</label><input type="email" id="f-email" name="email" placeholder="you@company.com" autocomplete="email" required></div>
+        <div class="field"><label for="f-phone">Phone number</label><input type="tel" id="f-phone" name="phone" placeholder="+256 ..." autocomplete="tel"></div>
+        <div class="field">
+          <label for="f-type">How can we help?</label>
+          <select id="f-type" name="type" required>
+            <option value="" disabled selected>Select a capability</option>
+            <option value="btl">BTL and Experiential Marketing</option>
+            <option value="digital">Digital Solutions</option>
+            <option value="strategy">Activation Strategy</option>
+            <option value="comms">Communications</option>
+            <option value="sales">Sales and Distribution</option>
+            <option value="supplies">General Supplies</option>
+            <option value="other">Something else entirely</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Tell us more</label><textarea id="f-msg" name="message" rows="4" placeholder="Objectives, timeline, budget range — the more we know, the better we can help."></textarea></div>
+        <p class="form-note">Every submission is read by a principal. You will hear from us within one working day.</p>
+        <button class="btn btn-primary" data-submit style="width:100%;justify-content:center;padding:1rem;">
+          <span>Brief us</span>
+          <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+        </button>
+      </div>
+      <div class="form-success" data-form-success>
+        <div class="success-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="success-title">Brief received.</div>
+        <p class="success-msg">A principal will be in touch within one working day. No account managers. No delays.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-bolt" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9 22L19.5 9.5H13L13 2Z"/></svg>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <img src="assets/icons/logo-white.svg" alt="MBolt" class="footer-logo">
+      <p class="footer-tagline-main">Own your market.</p>
+      <p class="footer-tagline-sub">Making your brand impossible to ignore.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Capabilities</div>
+      <ul class="footer-links">
+        <li><a href="#capabilities" data-service-open="btl">BTL Marketing</a></li>
+        <li><a href="#capabilities" data-service-open="digital">Digital Solutions</a></li>
+        <li><a href="#capabilities" data-service-open="strategy">Activation Strategy</a></li>
+        <li><a href="#capabilities" data-service-open="comms">Communications</a></li>
+        <li><a href="#capabilities" data-service-open="sales">Sales and Distribution</a></li>
+        <li><a href="#capabilities" data-service-open="supplies">General Supplies</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Get In Touch</div>
+      <ul class="footer-links">
+        <li><a href="tel:+256752625755">+256 752 625 755</a></li>
+        <li><a href="tel:+256758532555">+256 758 532 555</a></li>
+        <li><a href="mailto:jtayebwa@market-bolt.com">jtayebwa@market-bolt.com</a></li>
+        <li><a href="mailto:pangulo@market-bolt.com">pangulo@market-bolt.com</a></li>
+        <li><span class="addr">Kiira, Kampala, Uganda</span></li>
+        <li><a href="http://www.market-bolt.com" target="_blank" rel="noopener noreferrer">www.market-bolt.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025–2026 Market Bolt Uganda Ltd. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="legal.html">Privacy Policy</a>
+      <a href="legal.html#terms">Terms of Use</a>
+      <a href="legal.html#cookies">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

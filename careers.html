@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Careers at MBolt — We are not looking for people to fill roles. We are looking for people who make roles bigger. Join Uganda's leading experiential marketing agency.">
+  <title>Careers — MBolt</title>
+  <meta name="theme-color" content="#1D6A3A">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){
+      var s=localStorage.getItem('mbolt-theme');
+      var d=window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));
+    })();
+  </script>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cur-dot" id="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" id="cur-ring" aria-hidden="true"></div>
+
+<!-- SCROLL UP -->
+<button class="scroll-up" id="scroll-up" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<!-- A11Y -->
+<div class="a11y-wrap" role="complementary" aria-label="Accessibility options">
+  <button class="a11y-toggle" id="a11y-toggle" aria-label="Accessibility settings" aria-expanded="false">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="4" r="2"/><path d="M12 6v6l3 3M12 22v-4M7 9h10"/></svg>
+  </button>
+  <div class="a11y-panel" id="a11y-panel" role="dialog">
+    <div class="a11y-title">Accessibility</div>
+    <label class="a11y-opt"><input type="checkbox" id="a11y-hc"> High contrast</label>
+    <label class="a11y-opt"><input type="checkbox" id="a11y-motion"> Reduce motion</label>
+    <span class="a11y-slider-lbl" id="fs-lbl">Font size</span>
+    <input type="range" id="a11y-font" min="14" max="21" value="16" step="1" aria-labelledby="fs-lbl">
+  </div>
+</div>
+
+<!-- COOKIE -->
+<div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie notice">
+  <p class="cookie-text">We use cookies to improve your experience. See our <a href="legal.html">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookie-accept">Accept</button>
+    <button class="cookie-decline" id="cookie-decline">Decline</button>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="nav on-dark" id="main-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/icons/logo.svg" alt="MBolt" class="logo-colour">
+      <img src="assets/icons/logo-white.svg" alt="MBolt" class="logo-white">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#capabilities">Capabilities</a></li>
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="careers.html" class="active">Careers</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <a href="index.html#contact" class="nav-cta">Brief us
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+      </a>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer">
+    <div class="drawer-wm" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9 22L19.5 9.5H13L13 2Z"/></svg>
+    </div>
+    <nav>
+      <a href="index.html#capabilities">Capabilities</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="index.html#contact" class="drawer-cta">Brief us</a>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="careers-hero" aria-labelledby="careers-heading">
+  <div class="careers-hero-wm" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9 22L19.5 9.5H13L13 2Z"/></svg>
+  </div>
+  <div class="careers-hero-inner">
+    <div class="eyebrow" style="margin-bottom:1.2rem;">Join the team · Kampala, Uganda</div>
+    <h1 class="h-display" id="careers-heading" style="color:#fff;margin-bottom:1rem;">
+      We are not looking<br>for people to fill <em>roles.</em>
+    </h1>
+    <p style="font-family:var(--font);font-size:clamp(1rem,2vw,1.3rem);font-weight:300;color:rgba(255,255,255,.45);letter-spacing:-.01em;margin-bottom:2.5rem;max-width:500px;">
+      We are looking for people who make roles bigger.
+    </p>
+    <a href="#apply" class="btn btn-primary">
+      <span>Introduce yourself</span>
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- WHY MBOLT -->
+<section class="section" aria-labelledby="culture-heading">
+  <div class="reveal"><div class="eyebrow">Why MBolt</div></div>
+  <h2 class="h-section reveal reveal-d1" id="culture-heading" style="max-width:640px;margin-bottom:clamp(2rem,4vw,3rem);">
+    Built by people deeply<br><em>invested in what they do.</em>
+  </h2>
+  <p class="body-xl reveal reveal-d2" style="max-width:600px;margin-bottom:clamp(2.5rem,4vw,3.5rem);">
+    MBolt has been built by people who show up early, stay late when the activation demands it, and genuinely care about whether the brand moment lands. If that sounds like you, we want to hear from you.
+  </p>
+
+  <div class="culture-grid reveal reveal-d3">
+    <div class="culture-card">
+      <div class="culture-card-num">01</div>
+      <div class="culture-card-title">Real culture</div>
+      <p class="culture-card-desc">No corporate theatre. We work hard, celebrate wins, and treat each other like professionals. The work is demanding and the team makes it worth it.</p>
+    </div>
+    <div class="culture-card">
+      <div class="culture-card-num">02</div>
+      <div class="culture-card-title">Real growth</div>
+      <p class="culture-card-desc">We have been growing for fifteen years. The people who join us grow with us — in skill, in responsibility, and in what they are capable of.</p>
+    </div>
+    <div class="culture-card">
+      <div class="culture-card-num">03</div>
+      <div class="culture-card-title">Real impact</div>
+      <p class="culture-card-desc">Your work reaches real people in real places. You will see the results of what you do — on the ground, in the market, in the numbers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider" aria-hidden="true">
+  <div class="divider-line"></div>
+  <div class="divider-bolt"><svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9 22L19.5 9.5H13L13 2Z"/></svg></div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- APPLY -->
+<section class="section section-alt" id="apply" aria-labelledby="pipeline-heading">
+  <div class="reveal"><div class="eyebrow">Talent Pipeline</div></div>
+  <h2 class="h-section reveal reveal-d1" id="pipeline-heading" style="margin-bottom:1.2rem;">
+    No open roles right now.<br><em>But we are always looking.</em>
+  </h2>
+  <p class="body-lg reveal reveal-d2" style="max-width:580px;margin-bottom:clamp(2rem,4vw,3rem);">
+    We are always building our talent pool. If you are exceptional at what you do — field marketing, logistics, client service, creative, finance, or operations — send us your details and a note on why MBolt. We read everything.
+  </p>
+
+  <div class="pipeline-box reveal reveal-d3">
+    <div class="pipeline-top-bar"></div>
+    <div class="pipeline-inner" data-careers-form>
+      <div class="form-inner" data-form-inner>
+        <div class="pipeline-title">Introduce yourself.</div>
+        <p class="pipeline-body">Tell us who you are, what you do exceptionally well, and why MBolt. If the right role opens up — or if you make a case for creating one — we will be in touch.</p>
+        <div class="form-row">
+          <div class="field"><label for="c-name">Your name</label><input type="text" id="c-name" name="name" placeholder="Full name" required></div>
+          <div class="field"><label for="c-email">Email address</label><input type="email" id="c-email" name="email" placeholder="you@email.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="c-phone">Phone number</label><input type="tel" id="c-phone" name="phone" placeholder="+256 ..."></div>
+          <div class="field">
+            <label for="c-dept">Area of expertise</label>
+            <select id="c-dept" name="department" required>
+              <option value="" disabled selected>Select your field</option>
+              <option>Field Marketing</option>
+              <option>Operations and Logistics</option>
+              <option>Client Service</option>
+              <option>Finance</option>
+              <option>Creative and Strategy</option>
+              <option>Administration</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="c-why">Why MBolt?</label><textarea id="c-why" name="why" rows="5" placeholder="Tell us about yourself, what you are exceptional at, and why you want to be part of MBolt..." required></textarea></div>
+        <div class="field">
+          <label for="c-cv">CV / Portfolio link (optional)</label>
+          <input type="url" id="c-cv" name="cv" placeholder="https://...">
+        </div>
+        <p class="form-note">We take talent seriously. Every submission is read by a real person on our team.</p>
+        <button class="btn btn-primary" data-submit style="width:100%;justify-content:center;padding:1rem;">
+          <span>Send my introduction</span>
+          <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+        </button>
+      </div>
+      <div class="form-success" data-form-success>
+        <div class="success-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="success-title">Introduction received.</div>
+        <p class="success-msg">A member of our team will review your submission. If there is a fit, we will be in touch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM CTA -->
+<section class="testi-section" aria-label="Meet the team">
+  <div class="reveal" style="max-width:600px;">
+    <div class="eyebrow" style="color:rgba(255,255,255,.35);margin-bottom:1.2rem;">The people you would be joining</div>
+    <h2 class="h-section" style="color:#fff;margin-bottom:1.5rem;">A team that has been<br><em>doing this for fifteen years.</em></h2>
+    <p style="font-size:.9rem;color:rgba(255,255,255,.4);line-height:1.75;margin-bottom:2rem;max-width:420px;">Six dedicated professionals who have built something real in the Ugandan market. People who take their work seriously without taking themselves too seriously.</p>
+    <a href="index.html#team" class="btn btn-ghost">
+      <span>Meet the team</span>
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+    </a>
+  </div>
+  <div class="testi-stats">
+    <div class="tstat reveal reveal-d1">
+      <div class="tstat-num">15+</div>
+      <div class="tstat-label">Years building this team</div>
+    </div>
+    <div class="tstat reveal reveal-d2">
+      <div class="tstat-num">6</div>
+      <div class="tstat-label">Core team members</div>
+    </div>
+    <div class="tstat red reveal reveal-d3">
+      <div class="tstat-num">1</div>
+      <div class="tstat-label">Culture — no compromise</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-bolt" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9 22L19.5 9.5H13L13 2Z"/></svg>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <img src="assets/icons/logo-white.svg" alt="MBolt" class="footer-logo">
+      <p class="footer-tagline-main">Own your market.</p>
+      <p class="footer-tagline-sub">Making your brand impossible to ignore.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="index.html#capabilities">Capabilities</a></li>
+        <li><a href="index.html#work">Our Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Capabilities</div>
+      <ul class="footer-links">
+        <li><a href="index.html?service=btl">BTL Marketing</a></li>
+        <li><a href="index.html?service=digital">Digital Solutions</a></li>
+        <li><a href="index.html?service=strategy">Activation Strategy</a></li>
+        <li><a href="index.html?service=comms">Communications</a></li>
+        <li><a href="index.html?service=sales">Sales and Distribution</a></li>
+        <li><a href="index.html?service=supplies">General Supplies</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Get In Touch</div>
+      <ul class="footer-links">
+        <li><a href="tel:+256752625755">+256 752 625 755</a></li>
+        <li><a href="tel:+256758532555">+256 758 532 555</a></li>
+        <li><a href="mailto:jtayebwa@market-bolt.com">jtayebwa@market-bolt.com</a></li>
+        <li><a href="mailto:pangulo@market-bolt.com">pangulo@market-bolt.com</a></li>
+        <li><span class="addr">Kiira, Kampala, Uganda</span></li>
+        <li><a href="http://www.market-bolt.com" target="_blank" rel="noopener noreferrer">www.market-bolt.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025–2026 Market Bolt Uganda Ltd. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="legal.html">Privacy Policy</a>
+      <a href="legal.html#terms">Terms of Use</a>
+      <a href="legal.html#cookies">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
